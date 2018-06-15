@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div>
+    run
+<ul class="blogs" >
+    <li class="blog-content" th:each="data : ${datas}">
+        <a th:href="@{/article/details(id=${data.getArticle_id()})}" th:text="${data.getArticle_title()}">게시판</a>
+        <a th:href="@{/article/fix(article_id=${data.getArticle_id()},member_id=${data.getM_id()})}">수정</a>
+    </li>
+</ul>
+    <div>
+        <a href="create">게시판 추가</a>
+    </div>
+</div>
+
+</body>
+</html>

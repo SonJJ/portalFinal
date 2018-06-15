@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .input-not-view{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+<div class="main-menu">
+    <form action="/article/fix" class="upload-form" method="post">
+        제목 : <input type="text" name="article_title" th:value="${data.getArticle_title()}"/><br />
+        내용 : <textarea name="article_content" th:text="${data.getArticle_content()}" /><br />
+
+        게시판 번호 :  <input class="input-not-view" type="text" name="article_id" th:value="${data.getArticle_id()}"/><br />
+        맴버 아이디 :  <input class="input-not-view" type="text" name="member_id" th:value="${data.getM_id()}"/><br />
+        <input type="submit" value="전송" />
+    </form>
+</div>
+</body>
+</html>
