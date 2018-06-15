@@ -1,0 +1,1 @@
+INSERT INTO final_exam.travel_list (list_id, list_title, list_content, occ_time, start_time, end_time, view_count, point, password, user_name, country) VALUES (1, 'test', 'test', '2018-06-14 11:21:52', '2018-06-06', '2018-06-07', 0, 1, 0, 'ssss', 'ssss');
